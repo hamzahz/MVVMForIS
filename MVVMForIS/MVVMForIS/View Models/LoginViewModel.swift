@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 public class LoginViewModel {
     let loading = Box("")
