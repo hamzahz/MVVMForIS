@@ -35,7 +35,7 @@ class DetailListViewController: UIViewController {
     }
     
     func initViewModel() {
-        // Get employees data
+        // Get item list data
         viewModel.getItems { _, error in
             DispatchQueue.main.async {
                 if error != nil {
