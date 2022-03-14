@@ -3,7 +3,9 @@
 ViewController under MVVM
 
 `Reduced complexity`: LoginViewController is now much simpler.
+
 `Specialized`: LoginViewController not dependand on any model types and only focuses on the view.
+
 `Separated`: LoginViewController only interacts with the LoginViewModel by sending inputs, such as getAuthentication, or binding to its outputs.
 `Expressive`: LoginViewModel separates the business logic from the low level view logic.
 `Maintainable`: It’s simple to add a new feature with minimal modification to the LoginViewController.
