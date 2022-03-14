@@ -1,9 +1,9 @@
 # MVVMForIS
 
 ## Technologies
-`Generics`: This is being used for communication between ViewModel and ViewController
-`Closures`: This is being used for network communications
-`KeyChain`: This is used for managing secure user authentication
+`Generics`: This is being used for communication between ViewModel and ViewController.
+`Closures`: This is being used for network communications.
+`KeyChain`: This is used for managing secure user authentication.
 `CoreData`: This is being used for storing data persistently.
 
 ### ViewController under MVVM
