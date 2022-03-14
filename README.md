@@ -6,6 +6,9 @@
 3- `KeyChain`: This is used for managing secure user authentication.  
 4- `CoreData`: This is being used for storing data persistently.  
 
+## TestCases  
+1- `LoginAPI` test case added for reference.
+
 ### ViewController under MVVM
 
 `Reduced complexity`: LoginViewController is now much simpler.
