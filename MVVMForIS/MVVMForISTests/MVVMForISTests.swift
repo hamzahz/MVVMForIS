@@ -32,5 +32,17 @@ class MVVMForISTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testLoginAPI() throws {
+        let expectation = self.expectation(
+            description: "Get authentication for user")
+        let viewModel = LoginViewModel()
+        viewModel.getAuthentication(userName: "test1", password: "123") { user, error in
+            if user != nil {
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 8, handler: nil)
+    }
 
 }
