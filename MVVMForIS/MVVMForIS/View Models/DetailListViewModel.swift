@@ -24,7 +24,8 @@ class DetailListViewModel {
         ItemListService.fetchItemList { results, error in
             if let data = results {
                 DatabaseManager.sharedInstance.clearData()
-                if let items = DatabaseManager.sharedInstance.saveInCoreDataWith(array: data) {
+                DatabaseManager.sharedInstance.saveInCoreDataWith(array: data)
+                if let items = DatabaseManager.sharedInstance.getList() {
                     self.fetchData(items: items)
                 }
                 completion(results, nil)

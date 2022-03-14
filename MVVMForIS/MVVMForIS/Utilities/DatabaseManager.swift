@@ -19,16 +19,26 @@ class DatabaseManager: NSObject {
         return frc
     }()
     
-    func saveInCoreDataWith(array: [[String: AnyObject]]) -> [Item]? {
-        _ = array.map{self.createItemEntityFrom(dictionary: $0)}
+    func getList() -> [Item]? {
         do {
-            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
             try self.fetchedhResultController.performFetch()
             return self.fetchedhResultController.fetchedObjects as? [Item]
         } catch let error {
             print(error)
         }
         return nil
+    }
+    
+    func saveInCoreDataWith(array: [[String: AnyObject]]) {
+        _ = array.map{self.createItemEntityFrom(dictionary: $0)}
+        do {
+            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+            //try self.fetchedhResultController.performFetch()
+            //return self.fetchedhResultController.fetchedObjects as? [Item]
+        } catch let error {
+            print(error)
+        }
+        //return nil
     }
     
     func createItemEntityFrom(dictionary: [String: AnyObject]) -> NSManagedObject? {
