@@ -1,4 +1,4 @@
-# MVVMForIS
+# iOS MVVM Architecture
 
 ## Technologies
 1- `Generics`: This is being used for communication between ViewModel and ViewController.  
